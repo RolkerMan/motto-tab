@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新页面</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        background: url(./assets/images/Midi_Peak[10wallpaper.com].webp);
+        background-size: cover;
+      }
+      .motto-wrapper {
+        width: 100%;
+        position: fixed;
+        top: 20px;
+      }
+      #motto {
+        font-family: "Rastano-2", -apple-system, BlinkMacSystemFont, segoe ui,
+          Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue,
+          sans-serif;
+        font-style: italic;
+
+        width: 100%;
+        font-size: 32px;
+        color: white;
+        text-shadow: 3px 0px 7px rgba(94, 108, 116, 0.8),
+          -3px 0px 7px rgba(94, 108, 116, 0.8),
+          0px 4px 7px rgba(94, 108, 116, 0.8);
+
+        display: flex;
+        text-align: center;
+        padding: 0.5em 0;
+        margin: 0 0;
+
+        justify-content: center;
+        line-height: 1.6;
+        word-break: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="motto-wrapper">
+      <h2 id="motto"></h2>
+    </div>
+  </body>
+  <script src="./data.js"></script>
+  <script>
+    // select one random motto from mottos
+    const motto = mottos[Math.floor(Math.random() * mottos.length)];
+    document.getElementById("motto").innerText = motto.content;
+  </script>
+</html>
